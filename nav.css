@@ -131,7 +131,7 @@ nav {
     opacity: 0;
     top: 3em;
     transform: translateY(-200px);
-    background-image: linear-gradient(to right bottom, rgba(0, 171, 184, 0.7), rgba(31, 193, 190, 0.7), rgba(67, 212, 190, 0.7), rgba(104, 230, 188, 0.7), rgba(144, 248, 181, 0.7));
+    background-image: linear-gradient(to right bottom, rgba(0, 171, 184, 0.9), rgba(31, 193, 190, 0.9), rgba(67, 212, 190, 0.9), rgba(104, 230, 188, 0.9), rgba(144, 248, 181, 0.9));
     display: flex;
     align-items: center;
     justify-content: center;
