@@ -771,6 +771,7 @@ p.is-visible {
     padding: 13em 5em;
     transition: transform 2.5s;
     transform-style: preserve-3d;
+    min-height: 416px;
   }
 
   .card__content::before{
