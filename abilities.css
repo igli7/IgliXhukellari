@@ -100,15 +100,15 @@
 }
 
 #abilities ul li p.one.is-visible {
-    left: 80%;
+    left: 83%;
 }
 
 #abilities ul li p.two.is-visible {
-    left: 35%;
+    left: 70%;
 }
 
 #abilities ul li p.three.is-visible {
-    left: 40%;
+    left: 55%;
 }
 
 #abilities ul li p.four.is-visible {
@@ -116,7 +116,7 @@
 }
 
 #abilities ul li p.five.is-visible {
-    left: 65%;
+    left: 30%;
 }
 
 #abilities ul li p.six.is-visible {
@@ -124,15 +124,15 @@
 }
 
 #abilities ul li.one.is-visible::before {
-    width: 95%;
+    width: 97%;
 }
 
 #abilities ul li.two.is-visible::before {
-    width: 50%;
+    width: 85%;
 }
 
 #abilities ul li.three.is-visible::before {
-    width: 55%;
+    width: 70%;
 }
 
 #abilities ul li.four.is-visible::before {
@@ -140,7 +140,7 @@
 }
 
 #abilities ul li.five.is-visible::before {
-    width: 80%;
+    width: 45%;
 }
 
 #abilities ul li.six.is-visible::before {

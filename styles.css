@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -348,20 +349,21 @@ p.is-visible {
     }
 }
 
-/*=========== Education ======================*/
+/*=========== experience ======================*/
 
-#education {
+#experience {
     background-color: #2B303A;
     color: white;
+    overflow-y: hidden;
 }
 
-#education h2 {
+#experience h2 {
     color: #00ADBA;
     padding-top: 2em;
     padding-bottom: 1em;
 }
 
-#education h2::before, #education h2::after {
+#experience h2::before, #experience h2::after {
     content: '';
     width: 1.35em;
     height: 0.19rem;
@@ -522,7 +524,7 @@ p.is-visible {
     padding-bottom: 1.5em;
 }
 
-#education .box {
+#experience .box {
     position: relative;
     height: 3em;
     background-color: #2B303A;
@@ -552,7 +554,7 @@ p.is-visible {
     .timeline ul {
         position: relative;
     }
-    #education h2 {
+    #experience h2 {
         padding-bottom: 2.5em;
         padding-top: 2.5em;
         margin-right: -17%;
@@ -632,6 +634,16 @@ p.is-visible {
         border-top: none;
         border-right: none;
     }
+
+    .timeline1.two::before{
+        top: -0.07em;
+        border: 1px dashed rgb(134, 130, 130); 
+        border-top-left-radius: 30px;
+        border-bottom: none;
+        border-right: none;
+        border-bottom-left-radius: 0;
+    }
+
     .timeline1::after{
         content: '';
         display: block;
@@ -645,6 +657,14 @@ p.is-visible {
         border-bottom: none;
         border-top-right-radius: 30px;
         
+    }
+    .timeline1.two::after{
+        top: -4.23em;
+        border: 1px dashed rgb(134, 130, 130); 
+        border-bottom-right-radius: 30px;
+        border-left: none;
+        border-top: none;
+        border-top-right-radius: 0px;
     }
     
 
@@ -691,59 +711,345 @@ p.is-visible {
 
 
 
-/*=========== Careers ======================*/
+/*=========== Projects ======================*/
 
-
-/* Dark Line */
-
-#careers .timeline ul span.blue-line {
-    border: 1px solid #2B303A;
-    background-color: #2B303A;
-}
-
-/* Dots */
-
-#careers .timeline ul span.blue-line::after {
-    border: 10px solid white;
-}
-
-/* pointer */
-
-#careers .timeline ul li .content::after { 
-    background-color: white;
-    border-bottom: 1px solid #00ADBA;
-    border-left: 1px solid #00ADBA;
-}
-/*Dashed line*/
-
-#careers .timeline ul span.blue-line::before {
-    display: none;
-}
-
-#careers .timeline ul li {
-    border: 1px solid #00ADBA;
-}
-
-
-#careers .timeline ul li>div>div>a:hover {
-    color: black;
-}
-
-#careers .timeline ul li .date {
-    color: rgb(32, 32, 32);
-}
-
-#careers .timeline ul li .describe{
-    color: rgb(32, 32, 32);
-}
 
 @media (min-width: 840px) {
-    #careers .timeline ul span.blue-line::after {
-        top: 3em;
-        border: 20px solid white;
-        left: -1.5rem;
+    .wa2 {
+        margin-right: 17%;
     }
+    .wa2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }}
+
+    @media (min-width: 1331px) { 
+        .wa2 {
+            margin-right: 13%;
+        }
+        .card__container {
+            margin-left: 6%;
+        }
+    }
+
+#projects{
+    padding-bottom: 15em;
 }
+
+
+.card__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+
+.card {
+    flex: 0 1 290px;
+    margin: 2em 1.4em;
+    transition: perspective(800px);
+    min-width: 290px;
+}
+@media (min-width: 1650px) {
+    .card {
+        flex: 0 1 290px;
+        margin: 2em 3em;
+    }
+ }
+
+
+
+
+.card__content {
+    text-align: center;
+    position: relative;
+    padding: 13em 5em;
+    transition: transform 2.5s;
+    transform-style: preserve-3d;
+  }
+
+  .card__content::before{
+      content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 0.5;
+  }
+  
+  .card:hover .card__content {
+    transform: rotateY(.5turn);
+  }
+  
+  .card__front,
+  .card__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5em 3em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+  }
+  
+  .card__front {
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    background-blend-mode: overlay;
+    color: #333;
+  }
+  /* Different images for the cards */
+  .bookList .card__front {
+    background-image: url(/img/library.jpg);
+  }
+  .bookList .card__content::before{
+    
+    background-color: #dbda84;
+  }
+
+  .weightConverter .card__front{
+      background-image: url(/img/old-scale.jpg);
+  }
+  .weightConverter .card__content::before{
+    background-color:#ecd4ae;
+  }
+  .weightConverter .card__title {
+      font-size: 2.4rem;
+      margin-left: -15px;
+  }
+
+  .book .card__front{
+      background-image: url(/img/book.jpg);
+  }
+  
+  .book .card__content::before{
+      background-color: rgb(73, 163, 103);
+  }
+  
+  .card__front::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    border: 3px solid currentColor;
+    transform: translateZ(3rem);
+  }
+  
+  .card__title {
+    font-size: 3.5rem;
+    transform: translateZ(9rem);
+    order: 2;
+    text-transform: uppercase;
+  }
+  
+  .card__subtitle {
+    transform: translateZ(6rem);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .75rem;
+    font-weight: 700;
+    opacity: .7;
+  }
+  
+ 
+  
+  
+  .card__back {
+    transform: rotateY(.5turn);
+    color: #b7c9e5;
+    background: #333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card__back h5 {
+      font-size: 1.2em;
+      color: #E08976;
+      margin-top: -3em;
+      margin-bottom: 1em;
+      transform: translateZ(7em);
+  }
+
+  .card__back .progLanguages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 170%;
+}
+
+
+
+.card__back .language {
+    height: 22px;
+    flex: 0 1 120px;
+    margin: 0.8em 1em;
+    position: relative;
+    border-radius: 10px;
+    transform: translateZ(4rem);
+}
+
+
+
+.card__back .language .icon{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    width: 35px;
+    height: 35px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+ /* Background image for different divs */
+.card__back .language.css{
+    background-color:#2896CE;
+}
+.card__back .language.css .icon{
+    background-image: url(/img/css.jpg);
+}
+.card__back .language.html{
+    background-color: #EF6326;
+}
+.card__back .language.html .icon{
+    background-image: url(/img/html.jpg);
+}
+
+.card__back .language.javaScript{
+    background-color: #FDECA6;
+}
+.card__back .language.javaScript .icon{
+    background-image: url(/img/js.png);
+}
+
+.card__back .language.react{
+    background-color: #00adba;
+}
+.card__back .language.react .icon{
+    background-image: url(/img/react1.png);
+}
+.card__back .language.express{
+    background-color: #80bc01;
+}
+.card__back .language.express .icon{
+    background-image: url(/img/expressJS.png);
+}
+.card__back .language.mongo{
+    background-color: #5d4037;
+}
+.card__back .language.mongo .icon{
+    background-image: url(/img/mongoDB.png);
+}
+
+.card__back .language.sass{
+    background-color: #cd679a;
+}
+.card__back .language.sass .icon{
+    background-image: url(/img/sasspng.png);
+}
+
+
+
+
+
+
+
+.card__back .language p {
+    color: black;
+    margin-left: 2em;
+    font-weight: 800;
+}
+
+
+.aboutTheProject {
+    padding-top: 1.5em;
+    text-align: left;
+    transform: translateZ(4rem);
+    min-height: 200px;
+}
+.aboutTheProject h6 {
+    font-size: 1em;
+    color: white;
+}
+.aboutTheProject p{
+    margin-top: 0.6em;
+    font-size: 0.8em;
+    color: #b1b1b1;
+    line-height: 18px;
+}
+
+
+.buttons{
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 120%;
+    margin-left: -2em;
+    transform: translateZ(2rem);
+}
+
+.buttons .button {
+    padding: 15px 1em;
+    background-color: #575757;
+    border-radius: 5px;
+    margin-left: 1em;
+    display: flex;
+    color: white;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+    text-decoration: none;
+}
+.buttons .button .icon {
+    width: 21px;
+    height: 21px;
+    margin-right: 7px;
+    background-position: center;
+    background-size: cover;
+}
+
+.buttons .button.netlify{
+    min-width: 111.50px;
+}
+
+.buttons .button.github1 .icon{
+    background-image: url(/img/github-logo.png);
+}
+
+.buttons .button.netlify .icon{
+    background-image: url(/img/netlify.png);
+}
+
+.buttons .button.github1:hover{
+    background-color: #414141;
+}
+
+.buttons .button.netlify:hover{
+    background-color: #226872;
+}
+
+  
+
+
+
+
 
 /* =============== Footer =========== */
 
