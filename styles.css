@@ -32,6 +32,24 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-direction: column;
+}
+
+header .download {
+    background-color: #13C1B6;
+    padding: 0.8em 0em;
+    padding-left: 3em;
+    padding-right: 1em;
+    margin-top: 3em;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    
+}
+header .download i {
+    margin-left: 1.5em;
+    
 }
 
 header h1 {
