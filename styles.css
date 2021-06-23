@@ -470,7 +470,7 @@ p.is-visible {
   margin-right: 2em;
   margin-bottom: 5em;
   border: 1px solid rgba(112, 112, 112, 0.4);
-  transform: translateX(90%);
+  transform: translateX(300px);
   transition: transform 1s;
 }
 
@@ -669,7 +669,7 @@ p.is-visible {
   .timeline ul li.two {
     margin-left: 30%;
     margin-right: 10%;
-    transform: translateX(-60%);
+    transform: translateX(-300px);
     transition: transform 1s;
   }
   .timeline ul li.two.is-visible {
@@ -800,7 +800,7 @@ p.is-visible {
     margin-top: 0.5%;
     margin-left: 32%;
     margin-right: 4%;
-    transform: translateX(-60%);
+    transform: translateX(-300px);
     transition: transform 1s;
   }
 }
@@ -970,7 +970,7 @@ p.is-visible {
   z-index: 10;
 }
 
-.card__back h5 {
+.card__back .title {
   font-size: 1.2em;
   color: #e08976;
   margin-top: -3em;
@@ -1067,9 +1067,10 @@ p.is-visible {
   transform: translateZ(4rem);
   min-height: 200px;
 }
-.aboutTheProject h6 {
+.aboutTheProject .title {
   font-size: 1em;
   color: white;
+  margin-top: 0.25rem;
 }
 .aboutTheProject p {
   margin-top: 0.6em;
@@ -1137,7 +1138,7 @@ footer div {
   color: white;
   padding: 1.8em 0;
 }
-footer div h5 {
+footer div .title {
   font-size: 1.3em;
   font-weight: 400;
   letter-spacing: 2px;
